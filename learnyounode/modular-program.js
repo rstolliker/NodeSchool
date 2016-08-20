@@ -1,0 +1,10 @@
+var fileFilter = require("./modular.js")
+
+fileFilter(process.argv[2], process.argv[3], (err, data) => {
+    if (err)
+        return err
+    
+    data.forEach((file) => {
+        console.log(file)
+    })
+})
